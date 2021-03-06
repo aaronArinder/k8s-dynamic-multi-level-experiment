@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: scaling-experiment
+  name: scaling-experiment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: scaling-experiment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: scaling-experiment
+    spec:
+      containers:
+      - image: scaling-experiment
+        name: scaling-experiment
+        resources: {}
+        ports:
+          - containerPort: 8080
+status: {}
