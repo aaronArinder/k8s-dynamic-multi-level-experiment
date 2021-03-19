@@ -6,7 +6,21 @@ metadata:
     app: scaling-experiment
   name: scaling-experiment
 spec:
-  replicas: 5
+  replicas:
+    minimum: 5
+    maximum: 50
+  hpa:
+    enabled: true
+    cpuPercentage: 20
+  compute_resources:
+    enabled: true
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 500m
+      limits:
+        cpu: 1000m
+        memory: 500m
   selector:
     matchLabels:
       app: scaling-experiment
@@ -18,10 +32,10 @@ spec:
         app: scaling-experiment
     spec:
       containers:
-      - image: scaling-experiment
-        name: scaling-experiment
-        imagePullPolicy: Never
-        resources: {}
-        ports:
-          - containerPort: 8080
+        - image: scaling-experiment
+          name: scaling-experiment
+          imagePullPolicy: Never
+          resources: {}
+          ports:
+            - containerPort: 8080
 status: {}
