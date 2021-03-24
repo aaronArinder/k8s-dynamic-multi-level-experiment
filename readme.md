@@ -4,6 +4,7 @@ This readme will function as notes until the experiment works. I'll add proper d
 ## Notes
 - run `minikube tunnel` for the load balancer to work properly
     - run `minikube tunnel --cleanup` if the tunnel shuts down sloppily
+- make sure minikube has the metrics server enabled: `minikube addons enable metrics-server`
 - figure out local cpu/mem limits for pods to actually get all pods up/healthy
 
 
