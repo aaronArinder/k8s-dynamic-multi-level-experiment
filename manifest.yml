@@ -6,21 +6,6 @@ metadata:
     app: scaling-experiment
   name: scaling-experiment
 spec:
-  replicas:
-    minimum: 5
-    maximum: 50
-  hpa:
-    enabled: true
-    cpuPercentage: 20
-  compute_resources:
-    enabled: true
-    resources:
-      requests:
-        cpu: 1000m
-        memory: 500m
-      limits:
-        cpu: 1000m
-        memory: 500m
   selector:
     matchLabels:
       app: scaling-experiment
