@@ -20,13 +20,13 @@ spec:
         - image: scaling-experiment
           name: scaling-experiment
           imagePullPolicy: Never
-          #resources:
-          #  limits:
-          #    memory: "500Mi"
-          #    cpu: "1000m"
-          #  requests:
-          #    memory: "500Mi"
-          #    cpu: "1000m"
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "1000m"
+            requests:
+              memory: "500Mi"
+              cpu: "1000m"
           ports:
             - containerPort: 8080
 status: {}
