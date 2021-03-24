@@ -2,13 +2,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
+	"time"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "hi there")
+    time.Sleep(1 * time.Second)
 }
 
 func main(){
