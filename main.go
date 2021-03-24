@@ -17,4 +17,3 @@ func main(){
     // that's why it's returned to log.Fatal()
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
