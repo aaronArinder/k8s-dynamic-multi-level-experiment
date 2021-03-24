@@ -3,9 +3,9 @@
 # TODO: p95
 
 FAIL=0
-number_of_requests=4
-number_of_fake_clients=2
-target="10.106.25.213"
+number_of_requests=1000
+number_of_fake_clients=1000
+target=""
 pidlist=""
 
 start_time_in_ms=`gdate +%s%N | cut -b1-13`
