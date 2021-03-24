@@ -8,10 +8,11 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+    fmt.Fprintf(w, "hi there")
 }
 
 func main(){
+    log.Print("Server kicking on")
     http.HandleFunc("/", handler)
     // http.ListenAndServe blocks until error
     // that's why it's returned to log.Fatal()
