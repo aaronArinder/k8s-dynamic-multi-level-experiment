@@ -22,11 +22,11 @@ spec:
           imagePullPolicy: Never
           resources:
             limits:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "20m"
             requests:
-              memory: "100Mi"
-              cpu: "100m"
+              memory: "50Mi"
+              cpu: "20m"
           ports:
             - containerPort: 8080
 status: {}
@@ -63,4 +63,4 @@ spec:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 50
+          averageUtilization: 1
