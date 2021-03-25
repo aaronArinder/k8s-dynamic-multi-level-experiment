@@ -13,7 +13,7 @@ start_time_in_ms=`gdate +%s%N | cut -b1-13`
 i=0
 while [ $i -lt $number_of_fake_clients ]
 do
-curl -s $target > /dev/null
+curl -s "$target/?[1-$number_of_requests]" > /dev/null &
     i=$(( $i + 1 ))
     pidlist="$pidlist $!"
 done
