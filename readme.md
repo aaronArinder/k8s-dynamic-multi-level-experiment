@@ -1,5 +1,5 @@
 # WIP
-This readme will function as notes until the experiment works. I'll add proper docs then.
+This readme will function as notes until the experiment works. I'll add proper docs then. It's an attempt at implementing a [paper by Taherizadeh and Stankovski](https://academic.oup.com/comjnl/article/62/2/174/4993728).
 
 ## Notes
 - run `minikube tunnel` for the load balancer to work properly
